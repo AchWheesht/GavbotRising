@@ -5,4 +5,4 @@ Thrilling escapes! Daring chases! Deontological crises! Common theft! Paul!
 
 Take your Gavbot on a magical journey through a mildy dystopian future Scotland, ruled by machine doggo and his
 massive robot army. Where will your adventure take you?<text>
-<choice>BEGIN ADVENTURE<page>1<req>logged
+<choice>BEGIN ADVENTURE<page>outside_1<req>

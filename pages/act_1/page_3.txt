@@ -1,6 +1,0 @@
-<title>M.O.G., Lobby<title>
-<text>You dive through the door right as it closes, landing in a heap on the floor as a loud <i>thud</i> cuts off your
-access to the outside world.
-
-Standing up, you find yourself in the lobby of the ministry of Gavin.<text>
-<choice>Placeholder<page>4<req>None

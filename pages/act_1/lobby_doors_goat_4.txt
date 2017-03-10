@@ -1,0 +1,8 @@
+<title>M.O.G., Lobby<title>
+<text>You start to sweat. The unblinking, unwavering gaze of the goat is getting to you.
+
+The dial stops, and started to slowly move back towards "HAPPY".
+
+The goat stops chewing for a second, apparently deep in thought, then resumes<text>
+<choice>Goddammit, you can't give up now!<page>lobby_doors_goat_5<req>
+<choice>Leave! Leave now, while you still can!<page>lobby_doors_goat_leave<req>

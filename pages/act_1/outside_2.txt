@@ -5,4 +5,4 @@
 
  Then, all of a sudden, you find yourself alone again. It would appear that everyone made it inside. Suddenly, the doors begin to close!<text>
 
-<choice>Quickly, inside!<page>3<req>None
+<choice>Quickly, inside!<page>lobby_1<req>
