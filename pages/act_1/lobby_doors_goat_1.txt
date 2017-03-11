@@ -4,5 +4,6 @@ There is a goat in the room. It is staring at you, chewing slowly.
 
 There are some electrodes running from the goat to a dial mounted on the wall, with two ends labelled "HAPPY" and "SAD".
 The dial is currently most of the way towards the "happy" end.<text>
+<items><items>
 <choice>Stare back<page>lobby_doors_goat_2<req>
 <choice>Close the door<page>lobby_doors<req>

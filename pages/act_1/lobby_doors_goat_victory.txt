@@ -1,3 +1,4 @@
 <title>M.O.G., Lobby<title>
 <text>Congratulations!<text>
+<items><items>
 <choice>Return to the lobby<page>lobby_1<req>

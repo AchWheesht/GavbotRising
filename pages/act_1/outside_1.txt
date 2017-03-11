@@ -15,7 +15,7 @@ contact – in response to an email asking what you were actually going to be do
 
 Standing here now, beneath the latin, you pause to consider your feelings. What thoughts are running through your mind?
 How are you feeling right now?<text>
-
+<items><items>
 <choice>CONFIDENT<page>outside_2<req>
 <choice>SCARED<page>outside_2<req>
 <choice>AROUSED<page>outside_2<req>

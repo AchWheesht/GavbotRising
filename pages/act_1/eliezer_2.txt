@@ -1,3 +1,4 @@
 <title>M.O.G., behind the Elizer Yudkowsky door<title>
 <text>UNWRITTEN<text>
+<items><items>
 <choice><page><req>

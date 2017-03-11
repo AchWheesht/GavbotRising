@@ -6,5 +6,6 @@ isn't real. There is blood everywhere. Ia! Ia! Cthulhu ftaghn! You cry out, but 
 The dial moves slowly towards "HAPPY".
 
 The goat chews.<text>
+<items><items>
 <choice>YOU CAN DO IT YOU CAN DO IT YOU CAN DO IT YOU CAN DO IT<page>lobby_doors_goat_7<req>
 <choice>enough<page>lobby_doors_goat_leave<req>

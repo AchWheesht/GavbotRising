@@ -4,5 +4,6 @@
 The dial slowly starts shifting towards "SAD".
 
 The goat continues to chew.<text>
+<items><items>
 <choice>Continue staring<page>lobby_doors_goat_3<req>
 <choice>Back off<page>lobby_doors_goat_leave<req>

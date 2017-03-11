@@ -12,13 +12,18 @@ class PageManager:
         text = split[1]
         text = re.sub("\n\n", "<p>", text)
         text = "<p>" + text
+        split = re.split("<items>", split[2])
+        items = split[1]
+        print(split)
+        print(items)
         choices = re.split("<choice>", split[2])
-        choices.pop(0)
-        choices = [tuple(re.split("<page>", re.sub("\n", "", x))) for x in choices]
-        choices = [tuple([x[0]] + (re.split("<req>", x[1]))) for x in choices]
-        choices = [(x[0], x[1], re.split("/", x[2])) for x in choices]
-        choices = [x for x in choices if [y for y in x[2] if y in gavbot.traits + gavbot.inventory] == x[2] or x[2] == [""]]
-        page_data = [title, text, choices]
+        choices.pop(0) #now we have choices serialised
+        for i in range(len(choices)):
+            choices[i] = re.sub("\n", "", choices[i])
+            choices[i] = re.sub("<page>", "<>", choices[i])
+            choices[i] = re.sub("<req>", "<>", choices[i])
+            choices[i] = re.split("<>", choices[i])
+        page_data = [title, text, items, choices]
         return page_data
 
     def load_page(self, gavbot):
@@ -45,20 +50,27 @@ class Gavbot:
             self.inventory = []
             self.current_act = 1
             self.current_page = "intro"
-            self.manual_update_page(self.current_page)
+            self.manual_update_page()
             self.save_gav()
 
-    def manual_update_page(self, page_name):
-        self.page_data = self.manager.load_page(self)
-        self.valid_choices = [x[1] for x in self.page_data[2]]
+    def refine_choices(self, choices):
+        choices = [[x[0], x[1], re.split("/", x[2])] if re.split("/", x[2]) != [""] else [x[0], x[1], []] for x in choices]
+        choices = [x for x in choices if set(x[2]).issubset(set(self.traits + self.inventory))]
+        return(choices)
+
+    def manual_update_page(self):
+        page_data = self.manager.load_page(self)
+        self.page_title = page_data[0]
+        self.page_text = page_data[1]
+        self.page_items = page_data[2]
+        self.page_choices = self.refine_choices(page_data[3])
+        self.valid_choices = [x[1] for x in self.page_choices]
         self.save_gav()
 
     def update_page(self, page_name):
         if page_name in self.valid_choices:
             self.current_page = page_name
-            self.page_data = self.manager.load_page(self)
-            self.valid_choices = [x[1] for x in self.page_data[2]]
-            self.save_gav()
+            self.manual_update_page()
         else:
             print("NOT VALID PAGE CHOICE")
 
@@ -71,7 +83,7 @@ class Gavbot:
         self.inventory = []
         self.current_act = 1
         self.current_page = "intro"
-        self.manual_update_page(self.current_page)
+        self.manual_update_page()
         self.save_gav()
 
     def save_gav(self):
@@ -97,7 +109,7 @@ class Gavbot:
         self.inventory = data["inventory"]
         self.current_act = data["act"]
         self.current_page = data["page"]
-        self.manual_update_page(self.current_page)
+        self.manual_update_page()
 
 
 if __name__ == "__main__":

@@ -9,6 +9,7 @@ A receptionist sits behind a small desk in front of you. Human, oddly enough; re
 nowadays. He's reading a copy of <i>???</i>, and apparently hasn't noticed you.
 
 What will you do?<text>
+<items><items>
 <choice>Approach the receptionist<page>lobby_recep<req>
 <choice>Pick a door, any door<page>lobby_doors<req>
 <choice>Stand awkwardly<page>lobby_static<req>

@@ -57,9 +57,9 @@
       </div>
       <div id="content">
         <!-- insert the page content here -->
-        <h2 align="center">{{ gavbot.page_data[0] }}</h2>
-        {{ gavbot.page_data[1] }}
-        {% for choice in gavbot.page_data[2] %}
+        <h2 align="center">{{ gavbot.page_title }}</h2>
+        {{ gavbot.page_text }}
+        {% for choice in gavbot.page_choices %}
           <form action={{ "/page/" + choice[1] }}>
             <input class="button" type="submit" value="{{ choice[0] }}">
           </form>

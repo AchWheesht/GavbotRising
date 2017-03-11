@@ -1,3 +1,4 @@
 <title>M.O.G., Lobby<title>
 <text>Receptionist Page<text>
+<items><items>
 <choice>Placeholder<page>10<req>
