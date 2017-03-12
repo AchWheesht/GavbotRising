@@ -47,7 +47,8 @@ if __name__ == "__main__":
 
     app.secret_key = os.urandom(32)
 
-    bind = "127.0.0.1"
+    bind = "127.0.0.1" #local
+    #bind = "192.168.1.1:80" #remote
 
     if len(sys.argv) == 2:
         bind = sys.argv[1]
