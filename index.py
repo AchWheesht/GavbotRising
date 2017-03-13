@@ -48,7 +48,7 @@ def move_page(path):
         return redirect("/")
 
 def log_addr(ip):
-    with open("log\log.txt", "a") as file:
+    with open("log/log.txt", "a") as file:
         file.write(ip + "\n")
 
 
