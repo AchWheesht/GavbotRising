@@ -1,2 +1,4 @@
-log/
-saved_gavbots/
+log/*
+!log/placeholder.txt
+saved_gavbots/*
+!saved_gavbots/placeholder.txt
