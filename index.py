@@ -5,6 +5,7 @@ import jinja2
 import page_manager
 import os
 import json
+import socket
 
 app = Flask(__name__)
 app.jinja_env.autoescape = False
@@ -12,6 +13,9 @@ current_bots = {}
 
 @app.route("/")
 def index():
+    if request.remote_addr not in logged_sessions:
+        logged_sessions.append(request.remote_addr)
+        log_addr(request.remote_addr)
     if 'username' in session:
         return render_template("index.html", gavbot=current_bots[session['username']])
     else:
@@ -43,12 +47,22 @@ def move_page(path):
     else:
         return redirect("/")
 
+def log_addr(ip):
+    with open("log\log.txt", "a") as file:
+        file.write(ip + "\n")
+
+
 if __name__ == "__main__":
 
-    app.secret_key = os.urandom(32)
 
-    bind = "127.0.0.1" #local
-    #bind = "192.168.1.1:80" #remote
+    host_name = socket.gethostname()
+    app.secret_key = os.urandom(32)
+    logged_sessions = []
+
+    if host_name == "Gavbot":
+        bind = "192.168.1.1:80" #remote
+    else:
+        bind = "127.0.0.1" #local
 
     if len(sys.argv) == 2:
         bind = sys.argv[1]
