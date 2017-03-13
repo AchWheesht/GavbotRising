@@ -60,11 +60,14 @@ if __name__ == "__main__":
     logged_sessions = []
 
     if host_name == "Gavbot":
-        bind = "192.168.1.1:80" #remote
+        bind = "192.168.1.3"
+        port = 80 #remote
     else:
         bind = "127.0.0.1" #local
+        port = 5000
 
     if len(sys.argv) == 2:
         bind = sys.argv[1]
 
-    app.run(host=bind)
+
+    app.run(host=bind, port=port)
