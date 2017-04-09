@@ -1,0 +1,12 @@
+<title>M.O.G., First Floor<title>
+<text>You dash for the door, barely reaching it ahead of the darkness. You slam it shut behind you, and lean back
+heavily on it.
+
+<i>phew</i>
+
+Seconds later, the door bursts open and you are eaten by a thousand cackling demons.
+
+<h1>GAME OVER</h1><text>
+<items><items>
+<bounce><bounce>
+<choice><page><req>

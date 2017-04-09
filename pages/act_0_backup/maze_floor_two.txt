@@ -1,0 +1,10 @@
+<title>M.O.G, Floor Two<title>
+<text>At the next floor, you are greeted by a flashing neon light proclaiming "WELCOME TO FLOOR TWO OF THE MINISTRY
+OF GAVIN". There is a gavbot next to it, cheerfully waving at you. It has a photo of a smiling woman taped to its face.
+
+Behind the gavbot is a short corridor, lined with doors.<text>
+<items><items>
+<bounce><bounce>
+<choice>Head down the corridor<page>maze_floor_two_corridor<req>
+<choice>Head back downstairs<page>maze_floor_one<req>
+<choice>Head upstairs<page>maze_lobby<req>

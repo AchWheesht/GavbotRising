@@ -1,0 +1,9 @@
+<title>M.O.G., Lobby<title>
+<text>You walk away, wait until he isn't looking, and enthusiastically grimace while flipping him the bird. Fucker
+derserves it.
+
+Now, where were you going?<text>
+<items><items>
+<bounce><bounce>
+<choice>Head upstairs<page>maze_floor_one<req>
+<choice>Head downstairs<page>maze_downstairs<req>

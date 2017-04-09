@@ -1,0 +1,12 @@
+<title>M.O.G., Lobby<title>
+<text>You're on your knees. You don't remember falling. Visions of terrible memories flood your mind. You don't recognise
+them as yours. There is blood everywhere. You realise your parents never loved you. There is blood everywhere. The world
+isn't real. There is blood everywhere. Ia! Ia! Cthulhu ftaghn! You cry out, but no one hears. There is blood everywhere.
+
+The dial moves slowly towards "HAPPY".
+
+The goat chews.<text>
+<items><items>
+<bounce><bounce>
+<choice>YOU CAN DO IT YOU CAN DO IT YOU CAN DO IT YOU CAN DO IT<page>lobby_doors_goat_7<req>
+<choice>enough<page>lobby_doors_goat_leave<req>

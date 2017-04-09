@@ -1,0 +1,7 @@
+<title>M.O.G.<title>
+<text>The receptionist watches you walk down the stairs. Only he hears the gulp. No one ever sees you again.
+
+<h1>GAME OVER</h1><text>
+<items><items>
+<bounce><bounce>
+<choice><page><req>

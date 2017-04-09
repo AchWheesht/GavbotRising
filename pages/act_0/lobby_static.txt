@@ -1,0 +1,12 @@
+<title>M.O.G., Lobby<title>
+<text>When in doubt, do nothing. These are words you will live by, and words you'll die by. You'll be damned if you have
+initiate a conversation wit a stranger, even if its just for directions.
+
+The receptionist eventually looks up and notices you. There's a few seconds of eye contact, but he just returns to his book.
+
+This probably isn't going to achieve much.<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>Approach the receptionist<page>lobby_recep<req>
+<choice>Pick a door, any door<page>lobby_doors<req>

@@ -1,0 +1,11 @@
+<title>M.O.G., Lobby<title>
+<text>You stare at the goat. The goat stares at you. Several slow minutes pass.
+
+The dial slowly starts shifting towards "SAD".
+
+The goat continues to chew.<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>Continue staring<page>lobby_doors_goat_3<req>
+<choice>Back off<page>lobby_doors_goat_leave<req>

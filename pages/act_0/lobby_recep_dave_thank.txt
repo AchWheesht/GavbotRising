@@ -1,0 +1,9 @@
+<title>M.O.G., Lobby<title>
+<text>You thank him for his time. He peers over his magazine, looking a little surprised.
+
+As you set off, he speaks again: "Hey, you'll, err, probably need this", he says tossing you an ornate bronze disc
+"It'll be helpful".<text>
+<items>gain_meta_Bronze Disc<items>
+<bounce><bounce>
+<special><special>
+<choice>Be on your merry way<page>maze<req>

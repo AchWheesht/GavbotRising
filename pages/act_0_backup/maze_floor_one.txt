@@ -1,0 +1,12 @@
+<title>M.O.G., First Floor<title>
+<text>You head upstairs.
+
+At the first floor, there is only a small space with a single door. The door is boarded up (a shoddy job, just a couple
+of boards nailed across it), and the words "KEEP OUT" are scrawled across it in...red paint? Yeah, probably red paint.
+
+What do?<text>
+<items><items>
+<bounce><bounce>
+<choice>Go back downstairs<page>maze<req>
+<choice>Continue upstairs<page>maze_floor_two<req>
+<choice>Attempt to open the door<page>maze_floor_one_door_1<req>

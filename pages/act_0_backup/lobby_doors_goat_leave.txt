@@ -1,0 +1,5 @@
+<title>M.O.G., Lobby<title>
+<text>You close the door, a little freaked out. Perhaps you should try a different tactic<text>
+<items><items>
+<bounce><bounce>
+<choice>Re-evaluate your descisions<page>lobby_entrance<req>

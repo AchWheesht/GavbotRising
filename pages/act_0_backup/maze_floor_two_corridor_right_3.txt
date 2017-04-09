@@ -1,0 +1,5 @@
+<title>M.O.G., Second Floor<title>
+<text><text>
+<items><items>
+<bounce><bounce>
+<choice><page><req>

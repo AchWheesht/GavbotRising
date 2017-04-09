@@ -1,0 +1,23 @@
+<title>Outside the M.O.G.<title>
+<text><b>QUIDQUID LATINE DICTUM SIT, ALTEM VIDETUR</b>
+
+These words, carved in granite, stand atop the heavy wooden doors that stand before you. The doors themselves are covered with markings
+which, although static, seem to constantly weave and shift into new pictures. These are the famed doors of the Ministry of Gavin,
+the most prestigious and secretive organisation in Scotland, and your new place of employment.
+
+Very little is known about what happens behind those gigantic, hallucinogenic doors. In fact, you don't even know yourself.
+The job advert was simply a box that stated “Will pay for time and labour”, and the interview was a fifteen minute test with a
+single question - “Explain...why?”. It wasn't even apparent that you would be working here until the job offer came through the
+letterbox - a single piece of paper with the word "yes" stamped onto it.
+
+That had been three weeks ago. In the interim, there had been no contact from the M.O.G. Well, technically, there had been some
+contact – in response to an email asking what you were actually going to be doing at your job, you had received a blank card.
+
+Standing here now, beneath the latin, you pause to consider your feelings. What thoughts are running through your mind?
+How are you feeling right now?<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>CONFIDENT<page>outside_2<req>
+<choice>SCARED<page>outside_2<req>
+<choice>AROUSED<page>outside_2<req>

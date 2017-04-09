@@ -1,0 +1,9 @@
+<title>M.O.G., Lobby<title>
+<text>Fake it until you make it, right? You stride confidently towards a set of three important looking doors
+at the opposing end of the lobby. They all seem identical, save for an engraving carved into each one. Decision time!<text>
+<items><items>
+<bounce><bounce>
+<choice>Go through the door with the goat engraving<page>lobby_doors_goat_1<req>
+<choice>Go through the door with the car engraving<page>lobby_doors_car<req>
+<choice>Go through the door with the Eliezer Yudkowsky engraving<page>lobby_doors_eliezer_1<req>
+<choice>Chicken out<page>lobby_entrance<req>

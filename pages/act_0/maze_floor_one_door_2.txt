@@ -1,0 +1,10 @@
+<title>M.O.G., First Floor<title>
+<text><i>(It's blood! The red paint is blood! I thought it was obvious! Stop this madness already!)</i>
+
+You begin yanking the boards off the door. Nails clink off the floor as they are brutally dragged from the wall. There
+is the stench off death about this place.<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>Open the door <i>(Seriously?!)</i><page>maze_floor_one_door_3<req>
+<choice>Come to your senses<page>maze_floor_one<req>

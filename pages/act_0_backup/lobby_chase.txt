@@ -1,0 +1,10 @@
+<title>M.O.G., Lobby<title>
+<text>You dash out of the classroom and run headfirst into the guard who was stranding just outside the door. He's
+holding the rogue Gav by the scruff of the neck - it appears to have gone limp.
+
+"Is this yours?!" he demands<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>Yes<page>lobby_chase_yes<req>
+<choice>No<page>lobby_chase_no<req>

@@ -1,0 +1,9 @@
+<title>M.O.G., Lobby<title>
+<text>You brandish your bronze disc against the darkness. You make a heroic pose and everything.
+
+It has absolutely no effect.<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>Turn and Run<page>lobby_floor_one_door_run<req>
+<choice>Stand your ground<page>lobby_floor_one_door_stand<req>

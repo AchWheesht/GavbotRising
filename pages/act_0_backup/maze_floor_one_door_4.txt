@@ -1,0 +1,8 @@
+<title>M.O.G., First Floor<title>
+<text>You kick the door with all your might. The lock breaks, and the doors slams open.
+
+Behind the door lies a very long corridor. So, logn in fact, that you can't even see the end of it, it just sorta...fades
+into darknses. You also cannot see any doors or windows. There is the occasional potted plant.<text>
+<items><items>
+<bounce><bounce>
+<choice>Step Forward<page>maze_floor_one_door_5<req>
