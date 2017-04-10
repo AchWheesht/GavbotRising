@@ -1,0 +1,9 @@
+<title>M.O.G., Lobby<title>
+<text>You remain resolute. This goat aint gonna get the better of you, no siree.
+
+The ticker continues moving slowly towards "SAD".
+
+The goat continues chewing.<text>
+<items><items>
+<choice>Persevere<page>lobby_doors_goat_4<req>
+<choice>Back off<page>lobby_doors_goat_leave<req>

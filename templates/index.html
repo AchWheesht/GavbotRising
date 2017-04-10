@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>GAVBOT RISING</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <!--> <link rel="stylesheet" type="text/css" href="style/style.css" /> <!-->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}" />
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a>GAVBOT <span class="logo_colour">RISING</span></a></h1>
+          <h2></h2>
+        </div>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+      <div id="sidebar_container">
+        <div class="sidebar">
+          <div class="sidebar_top"></div>
+          <div class="sidebar_item">
+            <!-- insert your sidebar items here -->
+            {% if gavbot.owner %}
+              <h2> GAVBOT STATUS </h2>
+              <img class="gavbot" src="{{ gavbot.pic }}">
+              <h3>Name: {{ gavbot.owner }}</h3>
+              <h3>Health:</h3>
+              <img class="heart" src="{{ gavbot.health_pic}}">
+              <img class="heart" src="{{ gavbot.health_pic}}">
+              <img class="heart" src="{{ gavbot.health_pic}}">
+              <h3>Traits</h3>
+              <p> - {{ gavbot.traits }}
+              <h3>Inventory</h3>
+              <p> - {{ gavbot.inventory }}
+              <form action="/reset">
+                <input class="button" type="submit" value="Reset Gavbot">
+              </form>
+              <form action="/logout">
+                <input class="button" type="submit" value="Logout">
+              </form>
+            {% else %}
+              <form action="/login" method="post">
+                <h3>Please Log In</h3>
+                <p>Username
+                <input class="login" type="text" name="username"></input>
+                <input type="submit" value="Submit">
+              </form>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h2 align="center">{{ gavbot.page_title }}</h2>
+        {{ gavbot.page_text }}
+        {% for choice in gavbot.page_choices %}
+          <form action={{ "/page/" + choice[1] }}>
+            <input class="button" type="submit" value="{{ choice[0] }}">
+          </form>
+        {% endfor %}
+        <p>
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      <p><a href="index.html">Home</a> | <a href="examples.html">Examples</a> | <a href="page.html">A Page</a> | <a href="another_page.html">Another Page</a> | <a href="contact.html">Contact Us</a></p>
+      <p>Copyright &copy; simplestyle_4 | <a href="http://validator.w3.org/check?uri=referer">HTML5</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a> | <a href="http://www.html5webtemplates.co.uk">design from HTML5webtemplates.co.uk</a></p>
+    </div>
+  </div>
+</body>
+</html>

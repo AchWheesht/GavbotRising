@@ -1,0 +1,10 @@
+<title>M.O.G., Behind the Eliezer Yudkowsky door<title>
+<text>Steeling yourself, you grasp the handle. <i>Yes, I have acted irrationally</i> you think. <i>Yes, I have made poor
+life choices. But what matters is what I choose to do now, not what I have done in the past</i>. As you press down on the handle
+and open up the door, a faint feeling of approval washes over you. The engraving of Eliezer appears to be smiling.
+
+Behind the door is a room full of desks with Gavs of various models sitting at them. Every Gav is writing furiously - the sound of
+pen scratching on paper is...well, its not deafening, but its a louder sound than you would ever have thought pen scratching could
+make.<text>
+<items><items>
+<choice>Investigate<page>eliezer_2<req>
