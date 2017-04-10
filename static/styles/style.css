@@ -134,6 +134,7 @@ ol li
 #logo_text a:hover .logo_colour
 { color: #FFF;}
 
+<<<<<<< HEAD
 #logo_text h2 a
 { font-size: 100%;
   padding: 4px 0 0 0;
@@ -173,8 +174,6 @@ ul#menu li a
   color: #FFF;
   text-decoration: none;
   background: #5A5A5A url(page_graphics/tab.png) no-repeat 100% 0;}
-
-ul#menu li.selected a
 { height: 20px;
   padding: 6px 35px 5px 28px;}
 
@@ -350,6 +349,7 @@ table tr td
 { background: #E5E5DB;
   color: #47433F;
   border-top: 1px solid #FFF;}
+<<<<<<< HEAD
 
 #health_div
 { min-height: 50px;}
