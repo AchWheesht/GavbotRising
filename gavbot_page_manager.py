@@ -75,6 +75,7 @@ class Gavbot:
         except FileNotFoundError:
             self.owner = owner
             self.health = 3
+            self.max_health = 3
             self.meta = []
             self.traits = []
             self.inventory = []
@@ -89,6 +90,7 @@ class Gavbot:
             }
         self.pic = "/gavbot_static/images/gavbot.jpg"
         self.health_pic = "/gavbot_static/images/heart.jpg"
+        self.empty_health_pic = "/gavbot_static/images/empty_heart.jpg"
         self.update_page()
 
     def user_update_page(self, page_name):
@@ -190,9 +192,8 @@ class Gavbot:
     def reset_gavbot(self):
         """Restore Gavbot to factory settings"""
         self.manager = PageManager()
-        self.health = 3
-        self.pic = "/gavbot_static/images/gavbot.jpg"
-        self.health_pic = "/gavbot_static/images/heart.jpg"
+        self.health = 2
+        self.max_health = 3
         self.meta = []
         self.traits = []
         self.inventory = []
@@ -215,6 +216,7 @@ class Gavbot:
         data = {
             "owner": self.owner,
             "health": self.health,
+            "max_health": self.max_health,
             "meta": self.meta,
             "traits": self.traits,
             "inventory": self.inventory,
@@ -230,6 +232,7 @@ class Gavbot:
             data = json.loads(file.read())
         self.owner = data["owner"]
         self.health = data["health"]
+        self.max_health = data["max_health"]
         self.meta = data["meta"]
         self.traits = data["traits"]
         self.inventory = data["inventory"]

@@ -26,17 +26,20 @@
           <div class="sidebar_item">
             <!-- insert your sidebar items here -->
             {% if gavbot.owner %}
-              <h2> GAVBOT STATUS </h2>
+              <h2> <u>GAVBOT STATUS</u> </h2>
               <img class="gavbot" src="{{ gavbot.pic }}">
-              <h3>Name: {{ gavbot.owner }}</h3>
-              <div id="health_div">
-                <div id="health_title" style="clear.both">
-                  <h3 style="float: left">H:</h3>
-                </div>
-                <div id="heart_icons">
-                  <img class="heart" src="{{ gavbot.health_pic }}" style="float: right">
-                  <img class="heart" src="{{ gavbot.health_pic }}" style="float: right">
-                  <img class="heart" src="{{ gavbot.health_pic }}" style="float: right">
+              <!-- <h3>Name: {{ gavbot.owner }}</h3> -->
+              <div id="health_border">
+                <div id="health_div">
+                  {% for i in range(gavbot.max_health-gavbot.health) %}
+                  <div class="health_pic">
+                    <img class="heart" src="{{ gavbot.empty_health_pic }}" style="float: left">
+                  </div> {% endfor %}
+                  {% for i in range(gavbot.health) %}
+                    <div class="health_pic">
+                      <img class="heart" src="{{ gavbot.health_pic }}">
+                    </div>  {% endfor %}
+                  <span class="stretch"></span>
                 </div>
               </div>
               <h3>Traits</h3>
