@@ -2,3 +2,4 @@ log/*
 !log/placeholder.txt
 saved_gavbots/*
 !saved_gavbots/placeholder.txt
+*.pyc
