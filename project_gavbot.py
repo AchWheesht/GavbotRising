@@ -1,10 +1,11 @@
+import os, sys
+sys.path.append(os.path.dirname(__file__))
+import gavbot_page_manager
+
 if __name__ == "__main__":
     from flask import Flask, app, request, session, render_template, redirect, send_from_directory
-    import gavbot_page_manager
 else:
     from philsite import philsite, app, request, session, render_template, redirect, send_from_directory
-    import philsite.project_gavbot.gavbot_page_manager as gavbot_page_manager
-import os
 
 
 #Run as Standalone
