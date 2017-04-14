@@ -43,9 +43,12 @@ class PageManager:
     def load_page(self, gavbot):
         """Take a file name and pass the corresponding document string to interpret_page"""
         file_path = "{}pages/act_{}/{}.txt".format(gavbot.path, str(gavbot.current_act), str(gavbot.current_page))
-        with codecs.open(file_path, "r") as file:
-            print(file)
-            raw_text = file.read()
+        try:
+            with open(file_path, "r") as file:
+                raw_text = file.read()
+        except UnicodeDecodeError:                                  #Bizzare error on the pi: script was reading the files
+            with codecs.open(file_path, "r", "utf-8") as file:      #with encoding ANSI_X3.4-1968, instead of utf-8. After a long
+                raw_text = file.read()                              #time, this is the only solution I could find,
         page_data = self.interpret_page(raw_text, gavbot)
         return page_data
 
