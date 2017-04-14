@@ -44,6 +44,7 @@ class PageManager:
         """Take a file name and pass the corresponding document string to interpret_page"""
         file_path = "{}pages/act_{}/{}.txt".format(gavbot.path, str(gavbot.current_act), str(gavbot.current_page))
         with codecs.open(file_path, "r") as file:
+            print(file)
             raw_text = file.read()
         page_data = self.interpret_page(raw_text, gavbot)
         return page_data
@@ -107,8 +108,6 @@ class Gavbot:
         """Gets parsed page data from PageManager, then updates the appropriate Gavbot attributes
             Calls update_items and refine_choices to accomplish this"""
         page_data = self.manager.load_page(self)
-        print("gavbot:", page_data[3])
-        print("CURRENT INVENTORY:", self.meta)
         if page_data[3]:
             bounce = self.bounce_check(page_data[3])
             if bounce:
@@ -127,7 +126,6 @@ class Gavbot:
         """This function is passed a list of choices in the form [Choice text, destination, requirements], and
         will append a bool to the end of the list if all the choice requirements are satisfied"""
         item_list = self.meta + self.inventory + self.traits
-        print(choices)
         if choices == [["", "", ""]]: return None
         for choice in choices:
             choice.append(True)
@@ -146,12 +144,8 @@ class Gavbot:
             Bounces should be in format:
                 have_item one/no_item two/redirect|no_item one/redirect"""
         item_list = self.meta + self.inventory + self.traits
-        print("bounces:", item_list)
-        print("bounces:", bounces)
         bounces = re.sub("\\n", "", bounces)
-        print("bounces:", bounces)
         bounces = re.split ("\|", bounces)
-        print("bounces:", bounces)
         for i in range(len(bounces)):
             bounce = bounces[i]
             bounce = re.split("/", bounce)
@@ -181,7 +175,6 @@ class Gavbot:
         for item in item_list:
             item_commands = re.split("\_", item)
             item_name = item_commands[2]
-            print(item_commands)
             if item_commands[0] == "gain":
                 the_list = self.item_lists[item_commands[1]]
                 if item_name not in self.item_lists[item_commands[1]]: #if item_name not in
@@ -209,8 +202,6 @@ class Gavbot:
         self.current_page = "intro"
         self.update_page()
         self.save_gav()
-        print(self.meta)
-        print(self.item_lists)
 
     def save_gav(self):
         file_name = "{}saved_gavbots/{}.json".format(self.path, self.owner)
@@ -260,6 +251,3 @@ if __name__ == "__main__":
     gav.current_page = "lobby_chase_yes"
     gav.update_page()
     page = manager.load_page(gav)
-    print(page)
-    print(gav.meta)
-    print(gav.traits)
