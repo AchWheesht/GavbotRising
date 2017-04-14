@@ -44,13 +44,20 @@ class PageManager:
         """Take a file name and pass the corresponding document string to interpret_page"""
         file_path = "{}pages/act_{}/{}.txt".format(gavbot.path, str(gavbot.current_act), str(gavbot.current_page))
         try:
+            raw_text = self.open_file(file_path)
+        except FileNotFoundError:
+            raw_text = self.open_file(gavbot.path+"pages/act_0/null.txt")
+        page_data = self.interpret_page(raw_text, gavbot)
+        return page_data
+
+    def open_file(self, file_path):
+        try:
             with open(file_path, "r") as file:
                 raw_text = file.read()
         except UnicodeDecodeError:                                  #Bizzare error on the pi: script was reading the files
             with codecs.open(file_path, "r", "utf-8") as file:      #with encoding ANSI_X3.4-1968, instead of utf-8. After a long
                 raw_text = file.read()                              #time, this is the only solution I could find,
-        page_data = self.interpret_page(raw_text, gavbot)
-        return page_data
+        return raw_text
 
 class GavStat:
     def __init__(self):
@@ -86,6 +93,7 @@ class Gavbot:
             self.inventory = []
             self.current_act = 0
             self.current_page = "intro"
+            self.previous_page = None
             self.update_page()
             self.save_gav()
         self.item_lists = {
@@ -96,12 +104,16 @@ class Gavbot:
         self.pic = "/gavbot_static/images/gavbot.jpg"
         self.health_pic = "/gavbot_static/images/heart.jpg"
         self.empty_health_pic = "/gavbot_static/images/empty_heart.jpg"
+        self.special_functions = {
+        "null": self.special_null
+        }
         self.update_page()
 
     def user_update_page(self, page_name):
         """Method is called by the server to move to the appropriate page when the user makes a choice.
         Makes sure that the choice is, in fact, a choice the user is able to make"""
         if page_name in self.valid_choices:
+            self.previous_page = self.current_page
             self.current_page = page_name
             self.update_page()
         else:
@@ -117,6 +129,11 @@ class Gavbot:
                 self.current_page = bounce
                 self.update_page()
                 return
+        print(page_data)
+        if page_data[5]:
+            print(self.special_functions)
+            function = self.special_functions[page_data[5]]
+            page_data = function(page_data)
         self.page_title = page_data[0]
         self.page_text = page_data[1]
         self.page_items = page_data[2]
@@ -129,6 +146,7 @@ class Gavbot:
         """This function is passed a list of choices in the form [Choice text, destination, requirements], and
         will append a bool to the end of the list if all the choice requirements are satisfied"""
         item_list = self.meta + self.inventory + self.traits
+        print(choices)
         if choices == [["", "", ""]]: return None
         for choice in choices:
             choice.append(True)
@@ -203,6 +221,7 @@ class Gavbot:
             }
         self.current_act = 0
         self.current_page = "intro"
+        self.previous_page = None
         self.update_page()
         self.save_gav()
 
@@ -216,7 +235,8 @@ class Gavbot:
             "traits": self.traits,
             "inventory": self.inventory,
             "act": self.current_act,
-            "page": self.current_page}
+            "page": self.current_page,
+            "previous": self.previous_page}
         data_dumps = json.dumps(data)
         with open (file_name, "w") as file:
             file.write(data_dumps)
@@ -233,6 +253,11 @@ class Gavbot:
         self.inventory = data["inventory"]
         self.current_act = data["act"]
         self.current_page = data["page"]
+        self.previous_page = data["previous"]
+
+    def special_null(self, page_data):
+        page_data[4] = [["Go back a page", self.previous_page, ""]]
+        return page_data
 
     path = GavStat()
     owner = GavStat()

@@ -1,0 +1,6 @@
+<title>Page not written yet<title>
+<text>Hey, I'm a busy guy, all right? Go check elsewhere for a bit<text>
+<items><items>
+<bounce><bounce>
+<special>null<special>
+<choice><page><req>

@@ -1,1 +1,1 @@
-{"max_health": 3, "health": 2, "owner": "Ray", "meta": [], "act": 0, "page": "outside_1", "inventory": [], "traits": []}
+{"traits": ["Rebellious"], "meta": ["gavbot"], "inventory": [], "previous": "holding", "health": 2, "act": 0, "max_health": 3, "page": "lobby_chase_yes", "owner": "Ray"}

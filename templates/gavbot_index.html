@@ -26,7 +26,7 @@
           <div class="sidebar_item">
             <!-- insert your sidebar items here -->
             {% if gavbot.owner %}
-              <h2> <u>GAVBOT STATUS</u> </h2>
+              <!-- <h2> <u>GAVBOT STATUS</u> </h2> -->
               <img class="gavbot" src="{{ gavbot.pic }}">
               <!-- <h3>Name: {{ gavbot.owner }}</h3> -->
               <div id="health_border">
@@ -43,9 +43,25 @@
                 </div>
               </div>
               <h3>Traits</h3>
-              <p> - {{ gavbot.traits }}
+              {% if gavbot.traits %}
+                <ul>
+                {% for i in range(gavbot.traits|length) %}
+                  <li>{{ gavbot.traits[i] }}</li>
+                {% endfor %}
+                </ul>
+              {% else %}
+                  <p> Completely Bland
+              {% endif %}
               <h3>Inventory</h3>
-              <p> - {{ gavbot.inventory }}
+              {% if gavbot.inventory %}
+                <ul>
+                {% for i in range(gavbot.inventory|length) %}
+                  <li> {{ gavbot.inventory[i] }}</li>
+                {% endfor %}
+                </ul>
+              {% else %}
+                  <p> Not a penny to its name
+              {% endif %}
               <form action={{ path+"reset" }}>
                 <input class="button" type="submit" value="Reset Gavbot">
               </form>
