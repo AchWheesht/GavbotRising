@@ -1,5 +1,6 @@
 import re
 import json
+import codecs
 
 
 class PageManager:
@@ -42,7 +43,7 @@ class PageManager:
     def load_page(self, gavbot):
         """Take a file name and pass the corresponding document string to interpret_page"""
         file_path = "{}pages/act_{}/{}.txt".format(gavbot.path, str(gavbot.current_act), str(gavbot.current_page))
-        with open(file_path, "r") as file:
+        with codecs.open(file_path, "r") as file:
             raw_text = file.read()
         page_data = self.interpret_page(raw_text, gavbot)
         return page_data
