@@ -1,6 +1,9 @@
 <title>M.O.G., Second Floor<title>
-<text><text>
+<text>There's a skeleton behind this door, sitting at a desk. He looks mildly bored.
+
+"Let's play a game" he says. "I'll roll these two dice, and for each time I don't roll 11, I'll kill you. You in?"<text>
 <items><items>
 <bounce><bounce>
 <special><special>
-<choice><page><req>
+<choice>Sure<page>maze_floor_two_skeleton_game<req>
+<choice>Hell no<page>maze_floor_two_corridor<req>

@@ -1,5 +1,7 @@
 <title>M.O.G., Second Floor<title>
-<text><text>
+<text>There's a a very angry dragon behind this door.
+
+GAME OVER<text>
 <items><items>
 <bounce><bounce>
 <special><special>

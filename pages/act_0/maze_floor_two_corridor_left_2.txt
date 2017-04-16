@@ -3,5 +3,5 @@
 <items><items>
 <bounce><bounce>
 <special><special>
-<choice>Head upstairs<page><req>
-<choice>Head downstairs<page><req>
+<choice>Head upstairs<page>maze_floor_one<req>
+<choice>Head downstairs<page>maze_corridor<req>

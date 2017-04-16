@@ -1,6 +1,13 @@
 <title>M.O.G., Second Floor<title>
-<text><text>
+<text>You open the door, which seems to lead to the first door on the right of the corridor you're currently in. Huh.
+
+Where now?<text>
 <items><items>
 <bounce><bounce>
 <special><special>
-<choice><page><req>
+<choice>First door on the left<page>maze_floor_two_corridor_left_1<req>
+<choice>First door on the right<page>maze_floor_two_corridor_right_1<req>
+<choice>Second door on the left<page>maze_floor_two_corridor_left_2<req>
+<choice>Second door on the right<page>maze_floor_two_corridor_right_2<req>
+<choice>Third door on the left<page>maze_floor_two_corridor_left_3<req>
+<choice>Third door on the right<page>maze_floor_two_corridor_right_3<req>
