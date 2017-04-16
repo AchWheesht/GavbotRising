@@ -1,5 +1,0 @@
-<title>M.O.G., Lobby<title>
-<text>You open the car door and are greeted with a brick wall. Guess you can't go this way.<text>
-<items><items>
-<bounce><bounce>
-<choice>Well, phooey<page>lobby_doors<req>

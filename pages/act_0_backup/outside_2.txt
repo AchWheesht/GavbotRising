@@ -1,9 +1,0 @@
-<title>Outside the M.O.G.<title>
-<text>Before you can process your fleeting moment of introspection, an ear shattering GOOOOOOOOOONG pierces the air,
- and gigantic doors swing open. Dozens of previously unseen men and women, dressed in anachronistic formal wear, stream past you
- into the building, all without making a sound. It would appear the days work has begun.
-
- Then, all of a sudden, you find yourself alone again. It would appear that everyone made it inside. Suddenly, the doors begin to close!<text>
-<items><items>
-<bounce><bounce>
-<choice>Quickly, inside!<page>lobby_entrance<req>

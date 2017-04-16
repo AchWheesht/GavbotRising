@@ -1,6 +1,0 @@
-<title>M.O.G., First Floor<title>
-<text>The door is locked.<text>
-<items><items>
-<bounce><bounce>
-<choice>Kick it open <i>(This will not end well)</i><page>maze_floor_one_door_4<req>
-<choice>Listen to your conscience<page>maze_floor_one<req>

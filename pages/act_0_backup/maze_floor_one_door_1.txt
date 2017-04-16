@@ -1,9 +1,0 @@
-<title>M.O.G., First Floor<title>
-<text><i>Seriously?! What are you, a lemming? You realise this really isn't a good idea?)</i>
-
-You approach the door. You can hear whipsers coming from behind it. A chill runs down your spine. Various
-spooky feelings crowd your thoughts. <text>
-<items><items>
-<bounce><bounce>
-<choice>Start prying off the board<page>maze_floor_one_door_2<req>
-<choice>Wisely step back<page>mage_floor_one<req>

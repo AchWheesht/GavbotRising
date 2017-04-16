@@ -1,6 +1,0 @@
-<title>M.O.G., Second Floor, Second door on the left<title>
-<text>There is a staircase behind the door.<text>
-<items><items>
-<bounce><bounce>
-<choice>Head upstairs<page><req>
-<choice>Head downstairs<page><req>

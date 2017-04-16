@@ -1,9 +1,0 @@
-<title>M.O.G., Lobby<title>
-<text>"Ok, yeah, you need to go..." he briefly consults message written in pen on his hand "up three floors, second
-door on the left, down a floor, then straight on until you meet the guard"
-
-He waves his hand, and returns to reading his magazine.<text>
-<items><items>
-<bounce><bounce>
-<choice>Thank him for his time<page>lobby_recep_dave_thank<req>
-<choice>Flip this bellend the bird<page>lobby_recep_dave_bird<req>

@@ -1,8 +1,0 @@
-<title>Ministry of Gavin, Lobby<title>
-<text>You walk upstairs, and arrive at the lobby.
-
-Huh.<text>
-<items><items>
-<bounce><bounce>
-<choice>Head upstairs<page>maze_floor_one<req>
-<choice>Head downstairs<page>maze_downstairs<req>
