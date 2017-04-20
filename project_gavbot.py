@@ -25,8 +25,8 @@ class SiteInfo:
             self.app_dir = philsite.app_dir                                  #Directory of __init__ python file
             self.path = "/gavbot"                                            #Path prefix for website
             self.dir_name="project_gavbot/"                                  #Directory of project on website
+            self.gav_dir = self.app_dir + "/project_gavbot/"
             self.static_dir = self.app_dir + "/project_gavbot/static"        #Directory for static files
-
 
         self.script_dir = os.path.dirname(os.path.realpath(__file__))        #Directory for Gavbot class to use
         self.current_bots = {}                                               #Currently active gavbot users
