@@ -1,0 +1,6 @@
+<title>M.O.G., behind the skeleton's door<title>
+<text><text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice><page><req>

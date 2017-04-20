@@ -1,0 +1,13 @@
+<title>M.O.G., Second Floor<title>
+<text>
+
+The skeleton seems mildly surprised at the outcome. "Well, go ahead, I guess", he says. "Have fun through there"|
+"Well, look at that", says the skeleton. "It's not an eleven."
+
+"I'm not really sure what you were expecting", he adds, as he proceeds to eat your brain.
+
+<h1>GAME OVER<h1><text>
+<items><items>
+<bounce><bounce>
+<special>dice_game<special>
+<choice>Proceed through the door<page>maze_floor_two_skeleton_door<req>no_dead

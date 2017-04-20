@@ -83,6 +83,11 @@
       <div id="content">
         <!-- insert the page content here -->
         <h2 align="center">{{ gavbot.page_title }}</h2>
+        {% for action in gavbot.special %}
+          {% if action[0] == "as" %}
+            {{ action[1] }}
+          {% endif %}
+        {% endfor %}
         {{ gavbot.page_text }}
         {% if gavbot.page_choices %}
           {% for choice in gavbot.page_choices %}
@@ -93,6 +98,11 @@
             {% endif %}
           {% endfor %}
         {% endif %}
+        {% for action in gavbot.special %}
+          {% if action[0] == "ps" %}
+            {{ action[1] }}
+          {% endif %}
+        {% endfor %}
         <p>
       </div>
     </div>

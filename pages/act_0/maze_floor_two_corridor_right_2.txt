@@ -1,9 +1,13 @@
 <title>M.O.G., Second Floor<title>
-<text>There's a skeleton behind this door, sitting at a desk. He looks mildly bored.
+<text>The room is thick with dust and cobwebs. Spiders scutter from wall to wall. In the center of the room is an ancient mahogany desk,
+inscribed with eldritch runes from aeons past. Behind the desk sits a skeleton, bones dry and grey from years of neglect.
 
-"Let's play a game" he says. "I'll roll these two dice, and for each time I don't roll 11, I'll kill you. You in?"<text>
+Very slowly, oh so very slowly, the skeleton turns towards you, and intones:
+
+"Christ, its boring in here. Do you want to play a game? I'll roll these two dice, and for each time I don't roll 11, I'll kill you.
+If you don't die, you can go through this door behind me. You in?"<text>
 <items><items>
 <bounce><bounce>
 <special><special>
-<choice>Sure<page>maze_floor_two_skeleton_game<req>
+<choice>Sure, why not?<page>maze_floor_two_skeleton_game<req>
 <choice>Hell no<page>maze_floor_two_corridor<req>

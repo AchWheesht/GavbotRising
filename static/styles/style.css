@@ -394,3 +394,21 @@ table tr td
   border-color: black;
   border-width: thick;
 }
+
+.dice_div {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-left: 33%;
+  padding-right: 33%;
+}
+
+.die_img {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#content h1 {
+  text-align: center;
+  font-size: 40px;
+  font-style: bold;
+}

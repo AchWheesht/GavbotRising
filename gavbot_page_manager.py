@@ -1,7 +1,4 @@
-import re
-import json
-import codecs
-
+import re,json, codecs, random
 
 class PageManager:
     def __init__(self):
@@ -42,11 +39,11 @@ class PageManager:
 
     def load_page(self, gavbot):
         """Take a file name and pass the corresponding document string to interpret_page"""
-        file_path = "{}pages/act_{}/{}.txt".format(gavbot.path, str(gavbot.current_act), str(gavbot.current_page))
+        file_path = "{}pages/act_{}/{}.txt".format(gavbot.site.gav_dir, str(gavbot.current_act), str(gavbot.current_page))
         try:
             raw_text = self.open_file(file_path)
         except FileNotFoundError:
-            raw_text = self.open_file(gavbot.path+"pages/act_0/null.txt")
+            raw_text = self.open_file("pages/act_0/null.txt")
         page_data = self.interpret_page(raw_text, gavbot)
         return page_data
 
@@ -77,10 +74,10 @@ class GavStat:
             self.type = type(value)
 
 class Gavbot:
-    def __init__(self, owner, path="/"):
+    def __init__(self, owner, site=None):
         """Attempt to load a saved gavbot with the name provided; create a new gavbot with specific attributes
         if no such gavbot exists"""
-        self.path = path
+        self.site = site
         self.manager = PageManager()
         try:
             self.load_gav(owner)
@@ -94,7 +91,7 @@ class Gavbot:
             self.current_act = 0
             self.current_page = "intro"
             self.previous_page = None
-            self.update_page()
+            # self.update_page()
             self.save_gav()
         self.item_lists = {
             "meta": self.meta,
@@ -104,8 +101,10 @@ class Gavbot:
         self.pic = "/gavbot_static/images/gavbot.jpg"
         self.health_pic = "/gavbot_static/images/heart.jpg"
         self.empty_health_pic = "/gavbot_static/images/empty_heart.jpg"
+        self.special = Special(self)
         self.special_functions = {
-        "null": self.special_null
+        "null": self.special_null,
+        "dice_game": self.special.dice_game
         }
         self.update_page()
 
@@ -129,9 +128,8 @@ class Gavbot:
                 self.current_page = bounce
                 self.update_page()
                 return
-        print(page_data)
+        self.special = []
         if page_data[5]:
-            print(self.special_functions)
             function = self.special_functions[page_data[5]]
             page_data = function(page_data)
         self.page_title = page_data[0]
@@ -146,7 +144,6 @@ class Gavbot:
         """This function is passed a list of choices in the form [Choice text, destination, requirements], and
         will append a bool to the end of the list if all the choice requirements are satisfied"""
         item_list = self.meta + self.inventory + self.traits
-        print(choices)
         if choices == [["", "", ""]]: return None
         for choice in choices:
             choice.append(True)
@@ -180,7 +177,6 @@ class Gavbot:
                 else:
                     item = False if item[0] == "have" else True
                 bounce_items[i] = item
-            print(bounce_items)
             bounce_items = [x for x in bounce_items if x]
             bounce.append(len(bounce_items))
             bounces[i] = bounce
@@ -226,7 +222,7 @@ class Gavbot:
         self.save_gav()
 
     def save_gav(self):
-        file_name = "{}saved_gavbots/{}.json".format(self.path, self.owner)
+        file_name = "{}saved_gavbots/{}.json".format(self.site.gav_dir, self.owner)
         data = {
             "owner": self.owner,
             "health": self.health,
@@ -242,7 +238,7 @@ class Gavbot:
             file.write(data_dumps)
 
     def load_gav(self, owner):
-        file_name = "{}saved_gavbots/{}.json".format(self.path, owner)
+        file_name = "{}saved_gavbots/{}.json".format(self.site.gav_dir, owner)
         with open(file_name, "r") as file:
             data = json.loads(file.read())
         self.owner = data["owner"]
@@ -259,7 +255,6 @@ class Gavbot:
         page_data[4] = [["Go back a page", self.previous_page, ""]]
         return page_data
 
-    path = GavStat()
     owner = GavStat()
     health = GavStat()
     meta = GavStat()
@@ -270,12 +265,28 @@ class Gavbot:
     pic = GavStat()
     health_pic = GavStat()
 
+class Special:
+    def __init__(self, gavbot):
+        self.gavbot = gavbot
 
+    def dice_game(self, page_data):
+        dice_1 = random.randint(1, 6)
+        dice_2 = random.randint(1, 6)
+        win = True if dice_1 + dice_2 == 11 else False
+        img_1 = '<img class="die_img" src=/gavbot_static/images/dice/die_{}.png></img>'.format(dice_1)
+        img_2 = '<img class="die_img" src=/gavbot_static/images/dice/die_{}.png></img>'.format(dice_2)
+        html_line = '<div class="dice_div">' + img_1 + img_2 + '</div>'
+        text = re.split("\|", page_data[1])
+        if not win:
+            self.gavbot.meta.append("dead")
+        page_data[1] = text[0] if win else text[1]
+        self.gavbot.special.append(("as", html_line))
+        return page_data
 
-if __name__ == "__main__":
-    manager = PageManager()
-    gav = Gavbot("scripttest", path="")
-    gav.path = ""
-    gav.current_page = "lobby_chase_yes"
-    gav.update_page()
-    page = manager.load_page(gav)
+# if __name__ == "__main__":
+#     manager = PageManager()
+#     gav = Gavbot("scripttest", path="")
+#     gav.path = ""
+#     gav.current_page = "lobby_chase_yes"
+#     gav.update_page()
+#     page = manager.load_page(gav)

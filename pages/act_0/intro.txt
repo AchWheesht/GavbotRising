@@ -9,3 +9,4 @@ massive robot army. Where will your adventure take you?<text>
 <bounce><bounce>
 <special><special>
 <choice>BEGIN ADVENTURE<page>outside_1<req>
+<choice>DEBUG<page>maze_floor_two_skeleton_game<req>
