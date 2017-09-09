@@ -43,7 +43,7 @@ class PageManager:
         try:
             raw_text = self.open_file(file_path)
         except FileNotFoundError:
-            raw_text = self.open_file("pages/act_0/null.txt")
+            raw_text = self.open_file("{}pages/act_0/null.txt".format(gavbot.site.gav_dir))
         page_data = self.interpret_page(raw_text, gavbot)
         return page_data
 
