@@ -1,0 +1,14 @@
+<title>M.O.G., The Long Corridor<title>
+<text>You muster all the remaining energy you have and sprint for the end of the corridor. You feel your muscles start to burn,
+your bones start to ache, your lungs about to burst from the strain. Ever present behind you is the thumping of the dragon.
+
+Suddenly, the corridor ends. You find yourself standing in front of a heavy steel door. On your left, a bored looking guard
+sits at a desk.
+
+There is nothing behind you any more.
+<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>Examine the Door<page>maze_corridor_end_door<req>
+<choice>Chat to the Guard<page>maze_corridor_end_guard<req>

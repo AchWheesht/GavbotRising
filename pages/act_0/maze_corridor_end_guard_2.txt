@@ -1,0 +1,7 @@
+<title>M.O.G., The Long Corridor<title>
+<text>Yeah, bronze disc, he says. Whatshisface as reception should have given you one. Can't let you past
+without one.<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>Go and get a bronze disc<page>maze_corridor_end_guard_3<req>

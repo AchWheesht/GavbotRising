@@ -14,4 +14,4 @@ The laughing noise gets louder.<text>
 <special><special>
 <choice>Turn and Run<page>maze_floor_one_door_run<req>
 <choice>Stand your ground<page>maze_floor_one_door_stand<req>
-<choice>Branidish your ornate bronze disc<page>maze_floor_one_door_disc<req>have_Bronze Disc
+<choice>Brandish your ornate bronze disc<page>maze_floor_one_door_disc<req>have_Bronze Disc

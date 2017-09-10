@@ -1,0 +1,9 @@
+<title>M.O.G., The Long Corridor<title>
+<text>With a sigh, you walk back along the long corridor, up the stairs, past the gavbot with a picture of a woman taped
+to its face, down the stairs and head up to the reception desk.
+
+Without looking, the receptionist slides a bronze disk towards you.<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>Head back to the guard<page>maze<req>

@@ -1,0 +1,6 @@
+<title>M.O.G., The Long Corridor<title>
+<text>There is a Dragon behind you.<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>FUCKING RUN<page>maze_corridor_dragon_2<req>

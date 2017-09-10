@@ -1,0 +1,13 @@
+<title>M.O.G., The Long Corridor<title>
+<text>The door is about twice your height, made of solid steel, surrounded by rivets and appears to be opened by
+a circular crank. It is not unlike a submarine door.
+
+On the door, painted in red, is the word "DANGER".
+
+Slightly below that are the words "PROPERTY OF DAVE".
+
+Slightly below that, the words "NO GIRLS ALLOWED"<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>Chat to the Guard<page>maze_corridor_end_guard<req>

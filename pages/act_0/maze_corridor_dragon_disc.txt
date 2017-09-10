@@ -1,0 +1,10 @@
+<title>M.O.G., The Long Corridor<title>
+<text>You brandish your ornate bronze disc at the dragon.
+
+It has absolutely no effect, and you are promptly eaten.
+
+<h1>GAME OVER</h1><text><text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice><page><req>

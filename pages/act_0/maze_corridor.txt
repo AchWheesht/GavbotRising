@@ -1,6 +1,8 @@
 <title>M.O.G., The Long Corridor<title>
-<text>At the bottom of the stairs is a long corridor. Very, very long.<text>
+<text>At the bottom of the stairs is a long corridor, also lined with doors. Very, very long. You can just about make out a
+door at the very end.<text>
 <items><items>
 <bounce><bounce>
 <special><special>
-<choice><page><req>
+<choice>Proceed<page>maze_corridor_2<req>
+<choice>Go Back<page>maze_floor_two_corridor_left_2<req>

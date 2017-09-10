@@ -1,0 +1,10 @@
+<title>M.O.G., The Long Corridor<title>
+<text>You start making your way down the corridor. It has a very repetitive feel to it - almost as if some
+lazy game designer had build one small section of corridor and then copy pasted it 50 times in succession.
+
+Suddenly, you hear a noise behind you<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>Turn around, slowly<page>maze_corridor_dragon<req>
+<choice>Run as fast as your can away from the sound<page>maze_corridor_run<req>

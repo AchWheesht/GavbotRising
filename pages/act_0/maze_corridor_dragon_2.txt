@@ -1,0 +1,9 @@
+<title>M.O.G., The Long Corridor<title>
+<text>You belt down the corridor as fast as you can. You hear the dragon pick up speed behind you - you think
+it might be gaining on you<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>Run Faster<page>maze_corridor_dragon_run<req>
+<choice>Dive through one of the doors on your left<page>maze_corridor_dragon_door<req>
+<choice>Branidish your ornate bronze disc<page>maze_corridor_dragon_disc<req>have_Bronze Disc

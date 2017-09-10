@@ -1,0 +1,12 @@
+<title>M.O.G., The Long Corridor<title>
+<text>Fuck this. You sprint as fast as you can towards the end of the corridor.
+
+You get there suprisingly fast. Looking behind you, you can't see anything. Huh.
+
+You find yourself standing in front of a heavy steel door. On your left, a bored looking guard
+sits at a desk.<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>Examine the Door<page>maze_corridor_end_door<req>
+<choice>Chat to the Guard<page>maze_corridor_end_guard<req>

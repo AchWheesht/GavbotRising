@@ -1,0 +1,10 @@
+<title>M.O.G., The Long Corridor<title>
+<text>You suddenly veer to the left and attempt to wrench open one of the doors. Alas, it seems this is simply a paper
+printout of a door, and not a portal to escape as you might have hoped. It falls limply to the floor.
+
+Just what the hell <i>is</i> this place?<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>Make a dash for the end of the corridor<page>maze_corridor_dragon_run<req>
+<choice>Brandish your ornate bronze disc<page>maze_corridor_dragon_disc<req>have_Bronze Disc
