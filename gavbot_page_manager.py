@@ -40,6 +40,7 @@ class PageManager:
     def load_page(self, gavbot):
         """Take a file name and pass the corresponding document string to interpret_page"""
         file_path = "{}pages/act_{}/{}.txt".format(gavbot.site.gav_dir, str(gavbot.current_act), str(gavbot.current_page))
+        print("FILE PATH:", file_path)
         try:
             raw_text = self.open_file(file_path)
         except FileNotFoundError:
@@ -122,9 +123,11 @@ class Gavbot:
         """Gets parsed page data from PageManager, then updates the appropriate Gavbot attributes
             Calls update_items and refine_choices to accomplish this"""
         page_data = self.manager.load_page(self)
+        print("PAGE DATA:", page_data)
         if page_data[3]:
             bounce = self.bounce_check(page_data[3])
             if bounce:
+                print("BOUNCING")
                 self.current_page = bounce
                 self.update_page()
                 return
@@ -133,10 +136,12 @@ class Gavbot:
             function = self.special_functions[page_data[5]]
             page_data = function(page_data)
         self.page_title = page_data[0]
+        print("TITLE:", self.page_title)
         self.page_text = page_data[1]
         self.page_items = page_data[2]
         if self.page_items: self.update_items()
         self.page_choices = self.refine_choices(page_data[4])
+        print("CHOICES:", self.page_choices)
         self.valid_choices = [x[1] for x in self.page_choices if x[3]] if self.page_choices else None #Set possible page choices for user
         self.save_gav()
 

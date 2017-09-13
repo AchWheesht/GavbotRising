@@ -5,5 +5,5 @@ It has absolutely no effect.<text>
 <items><items>
 <bounce><bounce>
 <special><special>
-<choice>Turn and Run<page>lobby_floor_one_door_run<req>
-<choice>Stand your ground<page>lobby_floor_one_door_stand<req>
+<choice>Turn and Run<page>maze_floor_one_door_run<req>
+<choice>Stand your ground<page>maze_floor_one_door_stand<req>

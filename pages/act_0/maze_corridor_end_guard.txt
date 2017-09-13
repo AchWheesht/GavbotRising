@@ -5,5 +5,5 @@ He says you need a bronze disc if you want past.<text>
 <items><items>
 <bounce><bounce>
 <special><special>
-<choice>Brandish your ornate bronze disc<page>maze_corridor_dragon_disc<req>have_Bronze Disc
-<choice>...bronze disc?<page>maze_corridor_dragon_disc<req>no_Bronze Disc
+<choice>Brandish your ornate bronze disc<page>maze_corridor_end_guard_disc<req>have_Bronze Disc
+<choice>...bronze disc?<page>maze_corridor_end_guard_2<req>no_Bronze Disc

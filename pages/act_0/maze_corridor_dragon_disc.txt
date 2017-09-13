@@ -3,7 +3,7 @@
 
 It has absolutely no effect, and you are promptly eaten.
 
-<h1>GAME OVER</h1><text><text>
+<h1>GAME OVER</h1><text>
 <items><items>
 <bounce><bounce>
 <special><special>

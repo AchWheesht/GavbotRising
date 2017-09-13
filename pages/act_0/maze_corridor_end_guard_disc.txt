@@ -1,0 +1,9 @@
+<title>M.O.G., The Long Corridor<title>
+<text>You show the guard your ornate bronze disc, and he unceromoniusly wrenches the door open. You step through into a
+dark room.
+
+The door <i>clangs</i> shut behind you, cutting off all light in the room.<text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice>Flail about, trying to hit the light switch<page>dave_room<req>
