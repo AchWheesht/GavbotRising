@@ -1,6 +1,17 @@
-<title><title>
-<text><text>
+<title>M.O.G., Dave's Room<title>
+<text>It only takes 5 minutes of flailing about for you to find the light switch. With a dull <i>thunk</i>, the lights
+flicker on.
+
+You are standing in one half of a room divided by a thick glass barrier. The half of the room you're standing is set up like
+an orderly office. There's a few bookcases stuffed full of textbooks on Gav theory, a desk with a resonably modern desktop. In
+the far corner, an old server sits by itself humming. There is a door marked "TRAINING ROOM" on your left, and a large red button
+marked "BEGIN TRAINING" sits on a pedestal next to it.
+
+The other half of the room, behind the glass, has bright white walls and contains exactly two features. Firstly, a "TRAINING
+ROOM" door, similar to the one on your side. And secondly, there is a Gavbot huddling in the corner.<text>
 <items><items>
 <bounce><bounce>
 <special><special>
-<choice><page><req>
+<choice>Talk to the Gavbot<page>dave_room_gav<req>
+<choice>Log in the Computer<page>dave_room_pc<req>
+<choice>Press the button marked 'BEGIN TRAINING'<page>dave_room_training<req>

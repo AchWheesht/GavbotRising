@@ -1,0 +1,8 @@
+<<title>M.O.G., Dave's Room<title>
+<text>The Gav jumps up, startled, as you address it. It doesn't attempt to respond at all, instead it just attempts
+hide in the corner. It isn't very successful.<text>
+<items>gain_meta_CheckedDaveGav<items>
+<bounce><bounce>
+<special><special>
+<choice>Log in the Computer<page>dave_room_pc<req>no_CheckedDavePC
+<choice>Press the button marked 'BEGIN TRAINING'<page>dave_room_training<req>

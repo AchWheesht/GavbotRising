@@ -1,0 +1,15 @@
+<title>M.O.G., Dave's Room<title>
+<text>You walk up to the big red shiny button and give it a good smack.
+
+Nothing happens for a few seconds, and then launched backwards as a deafening buzz echoes through the room. The gavbot jolts
+upright, then quickly scurries through the now open training room door.
+
+You pick yourself up off the ground, cursing (with words appropriate to your age and culture), and make your way through
+your own door.
+
+YOU HAVE ACQUIRED: A GAVBOT
+</br>YOUR GAVBOT HAS ACQUIRED A TRAIT: PROPERTY OF DAVE<text>
+<items>gain_meta_gavbot|gain_trait_Property Of Dave<items>
+<bounce><bounce>
+<special><special>
+<choice>Proceed<page>end<req>

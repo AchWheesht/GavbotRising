@@ -1,0 +1,8 @@
+<title>M.O.G., Dave's Room<title>
+<text>You bring up the login screen, and don't get any further than that. Why would have his login details? He's just
+some guy you decided to impersonate at the reception desk. <text>
+<items>gain_meta_CheckedDavePC<items>
+<bounce><bounce>
+<special><special>
+<choice>Talk to the Gavbot<page>dave_room_gav<req>no_CheckedDaveGav
+<choice>Press the button marked 'BEGIN TRAINING'<page>dave_room_training<req>

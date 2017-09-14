@@ -12,4 +12,4 @@ YOU HAVE ACQUIRED: A GAVBOT
 <items>gain_meta_gavbot|gain_trait_Rebellious<items>
 <bounce><bounce>
 <special><special>
-<choice>Head up two floors, and take the third door on the left<page>holding<req>
+<choice>Head up two floors, and take the third door on the left<page>end<req>

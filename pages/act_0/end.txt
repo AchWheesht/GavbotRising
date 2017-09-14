@@ -1,0 +1,6 @@
+<title>ACT 1<title>
+<text><h2>A HERO APPEARS</h2><text>
+<items><items>
+<bounce><bounce>
+<special><special>
+<choice><page><req>
